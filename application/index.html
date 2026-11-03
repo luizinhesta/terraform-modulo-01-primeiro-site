@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Terraform na Prática - Laboratório 01: primeiro site publicado com Terraform no Amazon S3.">
+  <title>Terraform na Prática | Laboratório 01</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="badge">Etapa 1 &middot; Laboratório 01</p>
+    <h1>Terraform na Prática</h1>
+    <p class="lead">Este site foi publicado no Amazon S3 por código. Nenhum clique no console.</p>
+  </header>
+
+  <main>
+    <section class="section" aria-labelledby="lab">
+      <h2 id="lab">Primeiro laboratório</h2>
+      <p>
+        Neste laboratório você cria um bucket S3, habilita o Static Website Hosting
+        e envia os arquivos <code>index.html</code> e <code>style.css</code> usando apenas Terraform.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="iac">
+      <h2 id="iac">O que é Infrastructure as Code?</h2>
+      <p>
+        Infrastructure as Code (IaC) é descrever a infraestrutura em arquivos de texto.
+        Em vez de criar recursos manualmente, você escreve o <strong>estado desejado</strong>
+        e a ferramenta faz a AWS ficar igual ao que foi descrito.
+      </p>
+      <ul class="benefits">
+        <li><strong>Repetível:</strong> o mesmo código gera o mesmo resultado.</li>
+        <li><strong>Versionável:</strong> o histórico fica no Git.</li>
+        <li><strong>Revisável:</strong> você vê o plano antes de alterar algo.</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="ciclo">
+      <h2 id="ciclo">O ciclo de vida do Terraform</h2>
+      <div class="cards">
+        <article class="card">
+          <h3><code>terraform init</code></h3>
+          <p>Prepara a pasta: baixa o provider da AWS e cria o arquivo de lock.</p>
+        </article>
+        <article class="card">
+          <h3><code>terraform plan</code></h3>
+          <p>Compara o código com o que existe e mostra o que será criado, alterado ou removido.</p>
+        </article>
+        <article class="card">
+          <h3><code>terraform apply</code></h3>
+          <p>Executa o plano aprovado e cria os recursos na AWS.</p>
+        </article>
+        <article class="card">
+          <h3><code>terraform destroy</code></h3>
+          <p>Remove todos os recursos gerenciados, encerrando o laboratório.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Terraform na Prática &middot; Etapa 1 &middot; Módulo 01</p>
+  </footer>
+</body>
+</html>

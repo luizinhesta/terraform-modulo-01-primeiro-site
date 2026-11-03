@@ -1,0 +1,77 @@
+:root {
+  --roxo: #5c4ee5;
+  --roxo-escuro: #3b2fa8;
+  --fundo: #f6f5ff;
+  --texto: #1f1d3a;
+  --card: #ffffff;
+  --borda: #e1defa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.hero h1 { font-size: clamp(2rem, 6vw, 3.2rem); margin: 0.5rem 0; }
+.lead { font-size: 1.15rem; max-width: 36rem; margin: 0 auto; opacity: 0.95; }
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+main { max-width: 62rem; margin: 0 auto; padding: 1rem 1.5rem 3rem; }
+.section { padding: 1.5rem 0; }
+.section h2 { color: var(--roxo-escuro); }
+
+code {
+  background: #ece9ff;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.92em;
+}
+
+.benefits { padding-left: 1.2rem; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--borda);
+  border-top: 4px solid var(--roxo);
+  border-radius: 10px;
+  padding: 1.1rem;
+  box-shadow: 0 2px 8px rgba(60, 50, 160, 0.06);
+}
+
+.card h3 { margin-top: 0; font-size: 1.05rem; }
+.card p { margin-bottom: 0; }
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--borda);
+  color: #5d5a82;
+  font-size: 0.9rem;
+}
